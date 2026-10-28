@@ -1,0 +1,70 @@
+/* Hourly list */
+.hourly {
+  padding: 18px 8px 14px;
+}
+.hourly-title {
+  margin: 0 10px 8px;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+@media (min-width: 860px) {
+  .hours {
+    columns: 2;
+    column-gap: 32px;
+  }
+  .hours ion-item {
+    break-inside: avoid;
+  }
+}
+.hours {
+  background: transparent;
+  padding: 0;
+}
+.hours ion-item {
+  --padding-start: 10px;
+  --inner-padding-end: 10px;
+  --min-height: 42px;
+  border-bottom: 1px dashed var(--line);
+}
+.hours ion-item.is-now {
+  --background: color-mix(in oklab, var(--ai) 9%, transparent);
+}
+.row {
+  --tint: color-mix(in oklab, var(--ai), var(--shu) calc(round(var(--p)) * 100%));
+  display: grid;
+  grid-template-columns: 3.2rem 1fr 4rem;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+}
+.row time {
+  color: var(--nezumi);
+}
+.is-now .row time {
+  color: var(--sumi);
+  font-weight: 700;
+}
+.bar {
+  height: 3px;
+  background: var(--line);
+}
+.bar span {
+  display: block;
+  height: 100%;
+  width: calc(10% + var(--p) * 90%);
+  background: var(--tint);
+}
+.temp {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1.05rem;
+  text-align: right;
+  font-weight: 700;
+}
+.source {
+  margin: 14px 10px 0;
+  font-size: 0.8rem;
+  color: var(--nezumi);
+  line-height: 1.6;
+}

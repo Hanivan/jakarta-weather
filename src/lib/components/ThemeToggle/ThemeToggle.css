@@ -1,0 +1,41 @@
+/* Light/dark switch: a small disc that waxes into a crescent, echoing the hero's sun. */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 12px;
+  padding: 6px 12px 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--sumi);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  border-color: var(--nezumi);
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--ai);
+  outline-offset: 2px;
+}
+.moon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--shu);
+  box-shadow: inset 0 0 0 0 var(--paper);
+  transition:
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+.theme-toggle[aria-pressed='true'] .moon {
+  background: var(--ai);
+  box-shadow: inset -5px -3px 0 0 var(--paper);
+}
+@media (prefers-reduced-motion: reduce) {
+  .moon {
+    transition: none;
+  }
+}

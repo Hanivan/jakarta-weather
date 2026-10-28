@@ -1,0 +1,43 @@
+/*
+ * Washi + sumi: modern Japanese, clean with light decoration.
+ * Ai (indigo) means cool, shu (vermilion, the hanko color) means hot. Temperature is the only saturated color.
+ */
+:root {
+  --washi: #f2f1ec;
+  --paper: #fbfaf7;
+  --sumi: #24272c;
+  --nezumi: #6e7076;
+  --ai: #2b4c7e;
+  --shu: #c9432f;
+  --line: color-mix(in oklab, var(--sumi) 12%, transparent);
+  --seigaiha: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20' fill='none' stroke='%232b4c7e' stroke-width='1' opacity='.35'%3E%3Cg id='a'%3E%3Ccircle cx='20' cy='20' r='18'/%3E%3Ccircle cx='20' cy='20' r='13'/%3E%3Ccircle cx='20' cy='20' r='8'/%3E%3Ccircle cx='20' cy='20' r='3'/%3E%3C/g%3E%3Cuse href='%23a' x='-20' y='-10'/%3E%3Cuse href='%23a' x='20' y='-10'/%3E%3Cuse href='%23a' x='-20'/%3E%3Cuse href='%23a' x='20'/%3E%3C/svg%3E");
+
+  --ion-font-family: 'Zen Kaku Gothic New', system-ui, sans-serif;
+  --ion-background-color: var(--washi);
+  --ion-text-color: var(--sumi);
+  --ion-color-primary: #2b4c7e;
+  --ion-color-primary-rgb: 43, 76, 126;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #26436f;
+  --ion-color-primary-tint: #405e8b;
+  --ion-toolbar-background: var(--washi);
+  --ion-item-background: transparent;
+}
+
+/* Dark tokens, applied when useTheme() puts .dark on <html>. */
+:root.dark {
+  --washi: #191b20;
+  --paper: #22252b;
+  --sumi: #e9e7e1;
+  --nezumi: #9a9ca2;
+  --ai: #7d9ccc;
+  --shu: #e8735e;
+  --seigaiha: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20' fill='none' stroke='%237d9ccc' stroke-width='1' opacity='.3'%3E%3Cg id='a'%3E%3Ccircle cx='20' cy='20' r='18'/%3E%3Ccircle cx='20' cy='20' r='13'/%3E%3Ccircle cx='20' cy='20' r='8'/%3E%3Ccircle cx='20' cy='20' r='3'/%3E%3C/g%3E%3Cuse href='%23a' x='-20' y='-10'/%3E%3Cuse href='%23a' x='20' y='-10'/%3E%3Cuse href='%23a' x='-20'/%3E%3Cuse href='%23a' x='20'/%3E%3C/svg%3E");
+  --ion-color-primary: #7d9ccc;
+  --ion-color-primary-rgb: 125, 156, 204;
+  --ion-color-primary-contrast: #15171b;
+  --ion-background-color: var(--washi);
+  --ion-text-color: var(--sumi);
+  --ion-toolbar-background: var(--washi);
+  --ion-item-background: transparent;
+}

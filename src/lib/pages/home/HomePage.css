@@ -1,0 +1,27 @@
+/* Bento grid: 2 columns on phones, 4 on wide screens. */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 14px 14px 40px;
+}
+.hero,
+.week,
+.hourly {
+  grid-column: span 2;
+}
+@media (min-width: 860px) {
+  .bento {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    padding: 24px 24px 56px;
+  }
+  .hero {
+    grid-row: span 2;
+  }
+  .hourly {
+    grid-column: 1 / -1;
+  }
+}

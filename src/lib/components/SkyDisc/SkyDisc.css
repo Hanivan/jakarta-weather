@@ -1,0 +1,43 @@
+/*
+ * Sun or moon following the current Jakarta time.
+ * --alt: 0 at the horizon, 1 at noon; the disc sinks toward the tile's middle as it nears the horizon.
+ * Gradients are lit from above-left (the sky side) and darken toward the horizon side.
+ */
+.sky-disc {
+  position: absolute;
+  top: 22px;
+  right: 56px;
+  width: 92px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: 0 calc((1 - var(--alt, 1)) * 56px);
+  transition: translate 1.2s ease;
+}
+
+.sky-disc[data-phase='dawn'] {
+  background: linear-gradient(180deg, #8f88c4 0%, #e79a9a 55%, #f4b57a 100%);
+}
+.sky-disc[data-phase='morning'] {
+  background: radial-gradient(circle at 35% 30%, #ffe2a3 0%, #f7b45e 60%, #ec8a43 100%);
+}
+.sky-disc[data-phase='midday'] {
+  background: radial-gradient(circle at 35% 30%, #fff6d6 0%, #f8d061 45%, #eea83c 100%);
+  box-shadow: 0 0 0 10px color-mix(in oklab, #f8d061 18%, transparent);
+}
+.sky-disc[data-phase='afternoon'] {
+  background: radial-gradient(circle at 35% 30%, #fbc576 0%, #ec8d48 55%, #d9612f 100%);
+}
+.sky-disc[data-phase='dusk'] {
+  background: linear-gradient(180deg, #f2a24f 0%, #d9502f 50%, #7a3a63 100%);
+}
+/* Night: a pale crescent, cut with a mask so it works on any background. */
+.sky-disc[data-phase='night'] {
+  background: radial-gradient(circle at 40% 35%, #f3efe2 0%, #d9d3c0 100%);
+  mask: radial-gradient(circle at 78% 30%, transparent 40%, #000 41%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sky-disc {
+    transition: none;
+  }
+}

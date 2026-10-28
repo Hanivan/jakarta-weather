@@ -1,0 +1,53 @@
+body {
+  font-feature-settings: "palt";
+}
+
+ion-toolbar {
+  --border-width: 0 0 1px;
+  --border-color: var(--line);
+}
+ion-title {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+}
+/* Small hanko-style seal next to the title. */
+.mark {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-right: 0.55em;
+  border-radius: 2px;
+  background: var(--shu);
+  vertical-align: 0.02em;
+}
+
+.state {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 12px;
+  min-height: 60vh;
+  padding: 0 24px;
+  text-align: center;
+  color: var(--nezumi);
+}
+
+.label,
+.tile h2.label {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--nezumi);
+}
+
+/* Shared tile frame used by every bento component. */
+.tile {
+  position: relative;
+  overflow: hidden;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background-color: var(--paper);
+}

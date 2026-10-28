@@ -1,0 +1,48 @@
+/* Day picker */
+.days {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(58px, 1fr);
+  gap: 6px;
+  margin-top: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.day {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  padding: 10px 4px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--sumi);
+  font: inherit;
+  cursor: pointer;
+}
+.day:hover {
+  border-color: var(--line);
+}
+.day[aria-pressed='true'] {
+  border-color: var(--sumi);
+}
+.day:focus-visible {
+  outline: 2px solid var(--ai);
+  outline-offset: 2px;
+}
+.day-name {
+  font-size: 0.8rem;
+  color: var(--nezumi);
+}
+.day-date {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.day-max {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: color-mix(in oklab, var(--ai), var(--shu) calc(round(var(--p)) * 100%));
+}

@@ -1,0 +1,3 @@
+/* Global theme. Order matters: tokens, then base. Component and page styles live next to their .vue files in src/lib. */
+@import './variables.css';
+@import './base/global.css';

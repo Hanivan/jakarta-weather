@@ -1,0 +1,34 @@
+/* Seigaiha (blue ocean wave) tile: Jakarta's location, the coast it sits on. */
+.wave {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: var(--paper);
+  background-image: var(--seigaiha);
+  background-size: 40px 20px;
+}
+.wave::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 45% 0;
+  background: linear-gradient(var(--paper) 55%, transparent);
+}
+.wave > * {
+  position: relative;
+  z-index: 1;
+}
+.coords {
+  margin: 0;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.wave .label {
+  padding: 2px 6px;
+  margin-left: -6px;
+  align-self: flex-start;
+  background: var(--paper);
+  border-radius: 3px;
+}

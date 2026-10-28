@@ -1,0 +1,20 @@
+.today dl {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 0;
+}
+.today dt {
+  font-size: 0.8rem;
+  color: var(--nezumi);
+}
+.today dd {
+  margin: 0;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ai);
+}
+.today dd.hot {
+  color: var(--shu);
+}
