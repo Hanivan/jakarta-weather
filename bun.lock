@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "tugas2",
+      "name": "jakarta-weather",
       "dependencies": {
         "@capacitor/app": "8.1.2",
         "@capacitor/core": "8.5.3",

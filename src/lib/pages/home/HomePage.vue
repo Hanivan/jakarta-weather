@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header class="ion-no-border">
       <ion-toolbar>
-        <ion-title><span class="mark" aria-hidden="true"></span>Cuaca Jakarta</ion-title>
+        <ion-title><span class="mark" aria-hidden="true"></span>Jakarta Weather</ion-title>
         <ThemeToggle slot="end" />
       </ion-toolbar>
     </ion-header>

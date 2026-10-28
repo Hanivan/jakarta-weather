@@ -1,5 +1,5 @@
 {
-  "name": "tugas2",
+  "name": "jakarta-weather",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -53,5 +53,5 @@
     "vue-tsc": "^3.3.5"
   },
   "prettier": "@ionic/prettier-config",
-  "description": "An Ionic project"
+  "description": "Hourly temperature forecast for Jakarta, built with Ionic Vue"
 }

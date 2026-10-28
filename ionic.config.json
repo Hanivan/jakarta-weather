@@ -1,5 +1,5 @@
 {
-  "name": "cuaca-jakarta",
+  "name": "jakarta-weather",
   "integrations": {
     "capacitor": {}
   },
